@@ -9,20 +9,20 @@ angular.module('app.controllers', [])
         $window = $(window)
 
         $scope.main =
-            brand: 'Rainbow'
+            brand: 'Outdoola'
             name: 'Lisa Doe' # those which uses i18n directive can not be replaced for now.
 
 
         $scope.pageTransitionOpts = [
             name: 'Scale up'
             class: 'ainmate-scale-up'
-        ,   
+        ,
             name: 'Fade up'
             class: 'animate-fade-up'
-        ,   
+        ,
             name: 'Slide in from right'
             class: 'ainmate-slide-in-right'
-        ,   
+        ,
             name: 'Flip Y'
             class: 'animate-flip-y'
         ]
@@ -44,15 +44,15 @@ angular.module('app.controllers', [])
                  return
             if newVal.fixedHeader is false && newVal.fixedSidebar is true
                 if oldVal.fixedHeader is false && oldVal.fixedSidebar is false
-                    $scope.admin.fixedHeader = true 
-                    $scope.admin.fixedSidebar = true 
+                    $scope.admin.fixedHeader = true
+                    $scope.admin.fixedSidebar = true
                 if oldVal.fixedHeader is true && oldVal.fixedSidebar is true
-                    $scope.admin.fixedHeader = false 
-                    $scope.admin.fixedSidebar = false 
+                    $scope.admin.fixedHeader = false
+                    $scope.admin.fixedSidebar = false
                 return
             if newVal.fixedSidebar is true
                 $scope.admin.fixedHeader = true
-            if newVal.fixedHeader is false 
+            if newVal.fixedHeader is false
                 $scope.admin.fixedSidebar = false
 
             return
