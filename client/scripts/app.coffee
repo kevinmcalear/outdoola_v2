@@ -30,6 +30,9 @@ angular.module('app', [
     'app.chart.ctrls'
     'app.chart.directives'
     'app.page.ctrls'
+
+    # back-end & hosting with firebase
+    'firebase'
 ])
 
 .config([
