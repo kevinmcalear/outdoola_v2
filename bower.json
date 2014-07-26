@@ -31,7 +31,8 @@
     "jquery-spinner": "~0.1.5",
     "flot": "~0.8.3",
     "flot.tooltip": "~0.7.0",
-    "firebase": "~1.0.18"
+    "firebase": "~1.0.18",
+    "angularfire": "~0.7.1"
   },
   "devDependencies": {
     "holderjs": "~2.3.1",

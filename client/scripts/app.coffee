@@ -35,6 +35,9 @@ angular.module('app', [
     'firebase'
 ])
 
+# end this with a trailing slash
+.constant('FIREBASE_URL', 'https://shining-fire-341.firebaseio.com/')
+
 .config([
     '$routeProvider'
     ($routeProvider) ->
