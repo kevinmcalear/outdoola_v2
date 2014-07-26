@@ -30,7 +30,13 @@ angular.module('app', [
     'app.chart.ctrls'
     'app.chart.directives'
     'app.page.ctrls'
+
+    # back-end & hosting with firebase
+    'firebase'
 ])
+
+# end this with a trailing slash
+.constant('FIREBASE_URL', 'https://shining-fire-341.firebaseio.com/')
 
 .config([
     '$routeProvider'
@@ -44,7 +50,7 @@ angular.module('app', [
             'charts/charts', 'charts/flot', 'charts/morris'
             'pages/404', 'pages/500', 'pages/blank', 'pages/forgot-password', 'pages/invoice', 'pages/lock-screen', 'pages/profile', 'pages/signin', 'pages/signup'
             'mail/compose', 'mail/inbox', 'mail/single'
-            'tasks/tasks'
+            'tasks/tasks', 'adventures', 'adventures/new', 'manage-adventure'
         ]
 
         setRoutes = (route) ->

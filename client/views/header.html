@@ -4,6 +4,7 @@
     <div class="logo">
         <a href="#/">
             <!-- <span class="logo-icon glyphicon glyphicon-fire"></span> -->
+            <i class="wi-sunrise logo-icon"></i>
             <span>{{main.brand}}</span>
         </a>
     </div>
@@ -23,7 +24,7 @@
                              id="step3"
                              ><i class="fa fa-bars"></i></a>
             </li>
-            <li class="dropdown hidden-xs">
+            <!-- <li class="dropdown hidden-xs">
                 <a href="javascript:;" class="dropdown-toggle" id="step1" data-toggle="dropdown"><i class="fa fa-cogs"></i></a>
                 <div class="dropdown-menu with-arrow panel panel-dark admin-options" ui-not-close-on-click>
                     <div class="panel-heading"> Admin Options </div>
@@ -46,7 +47,7 @@
                         </li>
                         <li class="list-group-item">
                             <p>
-                                <span>Page Transition: </span> 
+                                <span>Page Transition: </span>
                                 <span class="space"></span>
                                 <select ng-model="admin.pageTransition"
                                         ng-options="ageTransitionOpt.name for ageTransitionOpt in pageTransitionOpts"></select>
@@ -54,7 +55,7 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> -->
 <!--             <li class="dropdown hidden-xs">
                 <a href="javascript:;" class="dropdown-toggle" id="step4" data-toggle="dropdown">
                     <i class="fa fa-tint"></i>
@@ -66,8 +67,95 @@
             <li class="search-box visible-md visible-lg">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="fa fa-search text-muted"></i></span>
-                    <input type="text" class="form-control" placeholder="Search...">
+                    <input type="text" class="form-control" placeholder="Search Adventures...">
                 </div>
+            </li>
+            <!-- <li class="dropdown">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-bell-o"></i>
+                    <span class="badge badge-info">3</span>
+                </a>
+                <div class="dropdown-menu with-arrow panel panel-dark">
+                    <div class="panel-heading">
+                        You have 3 notifications.
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="pull-left media-icon">
+                                    <span class="btn-icon-lined btn-icon-round btn-success"><i class="fa fa-bell-o"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">New tasks needs to be done</span>
+                                    <span class="text-muted block">2min ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="pull-left media-icon">
+                                    <span class="btn-icon-lined btn-icon-round btn-info"><i class="fa fa-bell-o"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">Change your password</span>
+                                    <span class="text-muted">3 hours ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="javascript:;" class="media">
+                                <span class="pull-left media-icon">
+                                    <span class="btn-icon-lined btn-icon-round btn-danger"><i class="fa fa-bell-o"></i></span>
+                                </span>
+                                <div class="media-body">
+                                    <span class="block">New feature added</span>
+                                    <span class="text-muted">9 hours ago</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="panel-footer">
+                        <a href="#/mail/inbox">Show all notifications.</a>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+
+        <ul class="nav-right pull-right list-unstyled">
+
+            <li class="dropdown text-normal nav-profile">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="images/g1.jpg" alt="" class="img-circle img30_30">
+                    <span class="hidden-xs">
+                        <span data-i18n="Lisa Doe"></span>
+                    </span>
+                </a>
+                <ul class="dropdown-menu with-arrow pull-right">
+                    <li>
+                        <a href="#/pages/profile">
+                            <i class="fa fa-user"></i>
+                            <span data-i18n="My Profile"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/tasks/tasks">
+                            <i class="fa fa-check"></i>
+                            <span data-i18n="My Tasks"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/pages/lock-screen">
+                            <i class="fa fa-lock"></i>
+                            <span data-i18n="Lock"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/pages/signin">
+                            <i class="fa fa-sign-out"></i>
+                            <span data-i18n="Log Out"></span>
+                        </a>
+                    </li>
+                </ul>
             </li>
             <li class="dropdown">
                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
@@ -111,101 +199,19 @@
                                     <span class="text-muted">9 hours ago</span>
                                 </div>
                             </a>
-                        </li>                       
+                        </li>
                     </ul>
                     <div class="panel-footer">
                         <a href="#/mail/inbox">Show all mails.</a>
                     </div>
                 </div>
             </li>
-            <li class="dropdown">
-                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-bell-o"></i>
-                    <span class="badge badge-info">3</span>
+            <li class="dropdown langs text-normal" >
+                <a href="#/forms/new-adventure">
+                    <button type="button" class="btn btn-w-md btn-gap-v btn-danger" style="margin-top: -5px;">Add Your Adventure</button>
                 </a>
-                <div class="dropdown-menu with-arrow panel panel-dark">
-                    <div class="panel-heading">
-                        You have 3 notifications.
-                    </div>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <a href="javascript:;" class="media">
-                                <span class="pull-left media-icon">
-                                    <span class="btn-icon-lined btn-icon-round btn-success"><i class="fa fa-bell-o"></i></span>
-                                </span>
-                                <div class="media-body">
-                                    <span class="block">New tasks needs to be done</span>
-                                    <span class="text-muted block">2min ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="javascript:;" class="media">
-                                <span class="pull-left media-icon">
-                                    <span class="btn-icon-lined btn-icon-round btn-info"><i class="fa fa-bell-o"></i></span>
-                                </span>
-                                <div class="media-body">
-                                    <span class="block">Change your password</span>
-                                    <span class="text-muted">3 hours ago</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="javascript:;" class="media">
-                                <span class="pull-left media-icon">
-                                    <span class="btn-icon-lined btn-icon-round btn-danger"><i class="fa fa-bell-o"></i></span>
-                                </span>
-                                <div class="media-body">
-                                    <span class="block">New feature added</span>
-                                    <span class="text-muted">9 hours ago</span>
-                                </div>
-                            </a>
-                        </li>                       
-                    </ul>
-                    <div class="panel-footer">
-                        <a href="#/mail/inbox">Show all notifications.</a>
-                    </div>
-                </div>
             </li>
-        </ul> 
-
-        <ul class="nav-right pull-right list-unstyled">
-
-            <li class="dropdown text-normal nav-profile">
-                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                    <img src="images/g1.jpg" alt="" class="img-circle img30_30">
-                    <span class="hidden-xs">
-                        <span data-i18n="Lisa Doe"></span>
-                    </span>
-                </a>
-                <ul class="dropdown-menu with-arrow pull-right">
-                    <li>
-                        <a href="#/pages/profile">
-                            <i class="fa fa-user"></i>
-                            <span data-i18n="My Profile"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#/tasks/tasks">
-                            <i class="fa fa-check"></i>
-                            <span data-i18n="My Tasks"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#/pages/lock-screen">
-                            <i class="fa fa-lock"></i>
-                            <span data-i18n="Lock"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#/pages/signin">
-                            <i class="fa fa-sign-out"></i>
-                            <span data-i18n="Log Out"></span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown langs text-normal" data-ng-controller="LangCtrl">
+           <!--  <li class="dropdown langs text-normal" data-ng-controller="LangCtrl">
                 <a href="javascript:;" class="dropdown-toggle active-flag" id="step2" data-toggle="dropdown">
                     <div class="flag {{ getFlag() }}"></div>
                 </a>
@@ -231,7 +237,7 @@
                     <li data-ng-show="lang !== '한국어' ">
                         <a href="javascript:;" data-ng-click="setLang('한국어')"><div class="flag flags-korea"></div> 한국어</a></li>
                 </ul>
-            </li>
+            </li> -->
         </ul>
     </div>
 
