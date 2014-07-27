@@ -1,6 +1,6 @@
 {
   "firebase": "shining-fire-341",
-  "public": "client",
+  "public": "app",
   "ignore": [
     "firebase.json",
     "**/.*",
