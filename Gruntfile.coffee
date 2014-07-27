@@ -15,10 +15,10 @@ mountFolder = (connect, dir) ->
 module.exports = (grunt) ->
     require("load-grunt-tasks") grunt
     require("time-grunt") grunt
-    
+
     # configurable paths
     yeomanConfig =
-        app: "client"
+        app: "app"
         dist: "dist"
 
     try
@@ -55,7 +55,7 @@ module.exports = (grunt) ->
         connect:
             options:
                 port: 9000
-                
+
                 # Change this to '0.0.0.0' to access the server from outside.
                 hostname: "localhost"
 
@@ -101,7 +101,7 @@ module.exports = (grunt) ->
                 imagesDir: "<%= yeoman.app %>/styles/ui/images/"
                 javascriptsDir: "<%= yeoman.app %>/scripts"
                 fontsDir: "<%= yeoman.app %>/fonts"
-                importPath: "<%= yeoman.app %>/bower_components"
+                importPath: "<%= yeoman.app %>/components"
                 httpImagesPath: "styles/ui/images/"
                 httpGeneratedImagesPath: "styles/ui/images/"
                 httpFontsPath: "fonts"
@@ -137,7 +137,7 @@ module.exports = (grunt) ->
                     cwd: "<%= yeoman.app %>/styles-less"
                     src: "main.less"
                     dest: ".tmp/styles"
-                    ext: ".css"                    
+                    ext: ".css"
                 ]
             dist:
                 options:
@@ -148,7 +148,7 @@ module.exports = (grunt) ->
                     cwd: "<%= yeoman.app %>/styles-less"
                     src: "main.less"
                     dest: ".tmp/styles"
-                    ext: ".css"                    
+                    ext: ".css"
                 ]
 
 
@@ -187,10 +187,10 @@ module.exports = (grunt) ->
                         css: ["cssmin"]
                     post: []
 
-        
+
         # 'css': ['concat']
         usemin:
-            html: ["<%= yeoman.dist %>/**/*.html", "!<%= yeoman.dist %>/bower_components/**"]
+            html: ["<%= yeoman.dist %>/**/*.html", "!<%= yeoman.dist %>/components/**"]
             css: ["<%= yeoman.dist %>/styles/**/*.css"]
             options:
                 dirs: ["<%= yeoman.dist %>"]
@@ -198,7 +198,7 @@ module.exports = (grunt) ->
         htmlmin:
             dist:
                 options: {}
-                
+
                 #removeCommentsFromCDATA: true,
                 #                    // https://github.com/yeoman/grunt-usemin/issues/44
                 #                    //collapseWhitespace: true,
@@ -215,7 +215,7 @@ module.exports = (grunt) ->
                     dest: "<%= yeoman.dist %>"
                 ]
 
-        
+
         # Put files not handled in other tasks here
         copy:
             dist:
@@ -227,10 +227,10 @@ module.exports = (grunt) ->
                     src: [
                         "favicon.ico"
                         # bower components that has image, font dependencies
-                        "bower_components/font-awesome/css/*"
-                        "bower_components/font-awesome/fonts/*"
-                        "bower_components/weather-icons/css/*"
-                        "bower_components/weather-icons/font/*"
+                        "components/font-awesome/css/*"
+                        "components/font-awesome/fonts/*"
+                        "components/weather-icons/css/*"
+                        "components/weather-icons/font/*"
 
                         "fonts/**/*"
                         "i18n/**/*"
