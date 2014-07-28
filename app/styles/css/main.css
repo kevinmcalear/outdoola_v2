@@ -2653,3 +2653,18 @@ body {
 .body-wide .introjs-helperLayer {
   display: none;
 }
+
+
+/* Adding a New Class To Hide The Side Menu */
+
+.hide-nav #nav-container {
+  display: none;
+}
+
+.hide-nav #content {
+  margin-left: 0px !important;
+}
+
+.hide-nav .nav-left li:nth-child(1) {
+  display: none;
+}

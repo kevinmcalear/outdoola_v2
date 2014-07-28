@@ -21,7 +21,7 @@
             return $location.path();
           };
           addBg = function(path) {
-            $element.removeClass('body-wide body-lock');
+            $element.removeClass('body-wide body-lock hide-nav');
             switch (path) {
               case '/404':
               case '/pages/404':
@@ -32,6 +32,9 @@
                 return $element.addClass('body-wide');
               case '/pages/lock-screen':
                 return $element.addClass('body-wide body-lock');
+              case '/pages/blank':
+                return $element.addClass('hide-nav');
+                console.log($element);
             }
           };
           addBg($location.path());
