@@ -2,7 +2,7 @@
   'use strict';
   angular.module('app.ui.form.ctrls', []).controller('TagsDemoCtrl', [
     '$scope', function($scope) {
-      return $scope.tags = ['foo', 'bar'];
+      return $scope.tags = ['Deer', 'Boar', 'Turkey'];
     }
   ]).controller('DatepickerDemoCtrl', [
     '$scope', function($scope) {

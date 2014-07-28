@@ -1,10 +1,224 @@
-<div class="page">
+<div class="page" toggleOffCanvas>
+   <section class="col-md-6">
+     <section class="panel panel-default">
+          <!-- <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Google Map - Dynamic Map</strong></div> -->
+          <div class="panel-body" data-ng-controller="MapDemoCtrl">
+              <map class="ui-map" zoom="14" center="[43.6650000, -79.4103000]"></map>
+          </div>
+      </section>
+      <section class="panel panel-default">
+        <div class="panel-body" data-ng-controller="DatepickerDemoCtrl">
+            <div class="row">
+                <h5 class="panel-body"><strong>Your Trip Date: {{dt | date:'fullDate'}}</strong></h5>
+                <div class="col-sm-3" data-ng-controller="TypeaheadCtrl" >
+                  <input type="text"
+                     ng-model="selected"
+                     typeahead="state for state in states | filter:$viewValue | limitTo:8"
+                     class="form-control"
+                     placeholder="Which state?">
+                </div>
+                <div class="col-sm-4">
+                    <div class="input-group ui-datepicker">
+                        <input type="text"
+                               class="form-control"
+                               datepicker-popup="{{format}}"
+                               ng-model="dt"
+                               is-open="opened"
+                               min="minDate"
+                               max="'2015-06-22'"
+                               datepicker-options="dateOptions"
+                               date-disabled="disabled(date, mode)"
+                               ng-required="true"
+                               close-text="Close">
+                        <span class="input-group-addon" ng-click="open($event)"><i class="fa fa-calendar"></i></span>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                  <span class="ui-select">
+                      <select>
+                          <option>1 Person</option>
+                          <option>2 People</option>
+                          <option>3 People</option>
+                          <option>4 People</option>
+                          <option>5 People</option>
+                          <option>6 People</option>
+                          <option>7 People</option>
+                          <option>8 People</option>
+                          <option>9 People</option>
+                          <option>10 People</option>
+                          <option>10+ People</option>
+                      </select>
+                  </span>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+          <h5><strong>Types Of Adventures</strong></h5>
+          <dl class="dl-horizontal">
+              <dt>Choose:</dt>
+              <dd>
+                  <label class="ui-checkbox"><input name="checkbox1" type="checkbox" value="option1" checked><span>Hunting</span></label>
+                  <label class="ui-checkbox"><input name="checkbox1" type="checkbox" value="option2" ><span>Fishing</span></label>
+                  <label class="ui-checkbox"><input name="checkbox1" type="checkbox" value="option3"><span>Camping</span></label>
+                  <label class="ui-checkbox"><input name="checkbox1" type="checkbox" value="option3"><span>Water</span></label>
+              </dd>
+          </dl>
+          <h5><strong>Specific Types</strong></h5>
+          <tags-input data-ng-controller="TagsDemoCtrl" ng-model="tags" class="ui-tags-input"></tags-input>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-12">
+              <h5><strong>Price Range</strong></h5>
+              <input type="text"
+                 value=""
+                 ui-range-slider
+                 data-slider-min="0"
+                 data-slider-max="100"
+                 data-slider-step="10"
+                 data-slider-orientation="horizontal"
+                 data-slider-value="[20, 80]"
+                 data-slider-selection="before"
+                 data-slider-tooltip="show"
+                 data-slider-handle="round">
+              <h5><strong>Distance Away</strong></h5>
+              <input type="text"
+                 value=""
+                 ui-range-slider
+                 data-slider-min="0"
+                 data-slider-max="100"
+                 data-slider-step="10"
+                 data-slider-orientation="horizontal"
+                 data-slider-value="30"
+                 data-slider-selection="before"
+                 data-slider-tooltip="show"
+                 data-slider-handle="round">
+            </div>
+          </div>
+        </div>
+          <!-- <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Google Map - Dynamic Map</strong></div> -->
+          <!-- <div class="panel-body" data-ng-controller="MapDemoCtrl"> -->
+              <!-- <map class="ui-map" zoom="14" center="[43.6650000, -79.4103000]"></map> -->
+          <!-- </div> -->
+      </section>
+   </section>
+   <section class="col-md-6">
+      <section class="col-md-6">
+       <!-- profile panel -->
+        <div class="panel panel-profile">
+            <div class="panel-heading text-center bg-info">
+                <img alt="" src="images/g1.jpg" class="img-circle img80_80">
+                <h3>{{main.name}}</h3>
+                <p>Boar Hunting</p>
+            </div>
+            <div class="list-justified-container">
+                <ul class="list-justified text-center">
+                    <li>
+                        <p class="size-h3">$679</p>
+                        <p class="text-muted">Person</p>
+                    </li>
+                    <li>
+                        <p class="size-h3">NY</p>
+                        <p class="text-muted">New York</p>
+                    </li>
+                    <li>
+                        <p class="size-h3">35</p>
+                        <p class="text-muted">Following</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- end profile panel -->
+      </section>
+      <section class="col-md-6">
+       <!-- profile panel -->
+        <div class="panel panel-profile">
+            <div class="panel-heading text-center bg-info">
+                <img alt="" src="images/g1.jpg" class="img-circle img80_80">
+                <h3>{{main.name}}</h3>
+                <p>Deer Hunting</p>
+            </div>
+            <div class="list-justified-container">
+                <ul class="list-justified text-center">
+                    <li>
+                        <p class="size-h3">$269</p>
+                        <p class="text-muted">Person</p>
+                    </li>
+                    <li>
+                        <p class="size-h3">GA</p>
+                        <p class="text-muted">Atlanta</p>
+                    </li>
+                    <li>
+                        <p class="size-h3">28</p>
+                        <p class="text-muted">Following</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- end profile panel -->
+      </section>
+      <section class="col-md-6">
+       <!-- profile panel -->
+        <div class="panel panel-profile">
+            <div class="panel-heading text-center bg-info">
+                <img alt="" src="images/g1.jpg" class="img-circle img80_80">
+                <h3>{{main.name}}</h3>
+                <p>Turkey Hunting</p>
+            </div>
+            <div class="list-justified-container">
+                <ul class="list-justified text-center">
+                    <li>
+                        <p class="size-h3">$425</p>
+                        <p class="text-muted">Person</p>
+                    </li>
+                    <li>
+                        <p class="size-h3">FL</p>
+                        <p class="text-muted">Merritt Island</p>
+                    </li>
+                    <li>
+                        <p class="size-h3">41</p>
+                        <p class="text-muted">Following</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- end profile panel -->
+      </section>
+      <section class="col-md-6">
+       <!-- profile panel -->
+        <div class="panel panel-profile">
+            <div class="panel-heading text-center bg-info">
+                <img alt="" src="images/g1.jpg" class="img-circle img80_80">
+                <h3>{{main.name}}</h3>
+                <p>Deer Hunting</p>
+            </div>
+            <div class="list-justified-container">
+                <ul class="list-justified text-center">
+                    <li>
+                        <p class="size-h3">$298</p>
+                        <p class="text-muted">Person</p>
+                    </li>
+                    <li>
+                        <p class="size-h3">OH</p>
+                        <p class="text-muted">Toledo</p>
+                    </li>
+                    <li>
+                        <p class="size-h3">23</p>
+                        <p class="text-muted">Following</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- end profile panel -->
+      </section>
 
-    <section class="panel panel-default">
+
+    <!-- <section class="panel panel-default">
         <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Blank Page</strong></div>
         <div class="panel-body">
             <p>Content goes here</p>
         </div>
-    </section> 
+    </section> -->
+    </section>
 
 </div>

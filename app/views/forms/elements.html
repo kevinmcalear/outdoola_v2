@@ -16,7 +16,7 @@
             <div class="space"></div>
             <label class="switch switch-danger"><input type="checkbox" checked><i></i></label>
         </div>
-    </section> 
+    </section>
     <!-- end Switch -->
 
 
@@ -79,7 +79,7 @@
         <div class="col-lg-6">
 
 
-            
+
 
             <!-- Spinner -->
             <section class="panel panel-default">
@@ -117,7 +117,7 @@
                         </div>
 
                 </div>
-            </section> 
+            </section>
             <!-- end Spinner -->
 
         </div>
@@ -238,7 +238,7 @@
                            data-slider-value="[10, 90]"
                            data-slider-selection="before"
                            data-slider-tooltip="show"
-                           data-slider-handle="round">                 
+                           data-slider-handle="round">
                 </div>
             </div>
 
@@ -277,14 +277,14 @@
         <div class="panel-body" data-ng-controller="TypeaheadCtrl">
             <div class="callout callout-info">
                 <p>State is: {{selected}}</p>
-            </div> 
+            </div>
             <div class="row">
                 <div class="col-sm-2">
-                    <input type="text" 
+                    <input type="text"
                            ng-model="selected"
                            typeahead="state for state in states | filter:$viewValue | limitTo:8"
                            class="form-control"
-                           placeholder="Search">                    
+                           placeholder="Search">
                 </div>
             </div>
         </div>
@@ -300,23 +300,23 @@
                 <div class="col-sm-4">
                     <div ng-model="mytime" ng-change="changed()" style="display:inline-block;">
                         <timepicker class="ui-timepicker" hour-step="hstep" minute-step="mstep" show-meridian="ismeridian"></timepicker>
-                    </div>                    
+                    </div>
                     <div class="callout callout-info">
                         <p>Time is: {{mytime | date:'shortTime' }}</p>
                     </div>
                 </div>
 
-                <div class="col-sm-8"> 
+                <div class="col-sm-8">
                     <p>
-                        Hours step is: 
+                        Hours step is:
                         <span class="space"></span>
                         <span class="ui-select"><select ng-model="hstep" ng-options="opt for opt in options.hstep"></select></span>
                     </p>
                     <p>
-                        Minutes step is: 
+                        Minutes step is:
                         <span class="ui-select"><select ng-model="mstep" ng-options="opt for opt in options.mstep"></select></span>
                     </p>
-                        
+
                     <button class="btn btn-info" ng-click="toggleMode()">12H / 24H</button>
                     <div class="space"></div>
                     <button class="btn btn-default" ng-click="update()">Set to 14:00</button>
@@ -339,16 +339,16 @@
                 <div class="col-sm-4">
 
                     <div class="input-group ui-datepicker">
-                        <input type="text" 
+                        <input type="text"
                                class="form-control"
                                datepicker-popup="{{format}}"
                                ng-model="dt"
                                is-open="opened"
                                min="minDate"
                                max="'2015-06-22'"
-                               datepicker-options="dateOptions" 
+                               datepicker-options="dateOptions"
                                date-disabled="disabled(date, mode)"
-                               ng-required="true" 
+                               ng-required="true"
                                close-text="Close">
                         <span class="input-group-addon" ng-click="open($event)"><i class="fa fa-calendar"></i></span>
                     </div>
@@ -380,7 +380,7 @@
         </div>
     </section>
     <!-- end Datepicker -->
-    
+
 
     <!-- Rating -->
     <section class="panel panel-default">
@@ -443,7 +443,7 @@
                 </div>
             </div>
 
-    </section> 
+    </section>
     <!-- end Rating -->
 
 
@@ -618,7 +618,7 @@
                         class="ui-tags-input"
                         ></tags-input>
         </div>
-    </section> 
+    </section>
     <!-- end Tags -->
 
 
