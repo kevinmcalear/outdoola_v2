@@ -67,7 +67,10 @@
         'tasks/tasks',
         'adventures',
         'adventures/new',
-        'manage-adventure'
+        'manage-adventure',
+        'pages/landing-page',
+        'pages/about',
+        'pages/contact'
       ];
       setRoutes = function(route) {
         var config, url;
@@ -83,7 +86,8 @@
       });
       return $routeProvider.when('/', {
         // templateUrl: 'views/pages/landing-page.html'
-        redirectTo: '/pages/blank'
+        redirectTo: 'pages/landing-page'
+        // redirectTo: '/pages/blank'
       }).when('/404', {
         templateUrl: 'views/pages/404.html'
       }).otherwise({

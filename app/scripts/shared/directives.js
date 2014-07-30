@@ -21,7 +21,7 @@
             return $location.path();
           };
           addBg = function(path) {
-            $element.removeClass('body-wide body-lock hide-nav');
+            $element.removeClass('body-wide body-lock hide-nav landing-page');
             switch (path) {
               case '/404':
               case '/pages/404':
@@ -29,10 +29,13 @@
               case '/pages/signin':
               case '/pages/signup':
               case '/pages/forgot-password':
-              case '/pages/landing_page.html':
-                return $element.addClass('body-wide');
+                return $element.addClass('hide-nav body-wide');
+              case '/pages/about':
+              case '/pages/contact':
+              case '/pages/landing-page':
+                return $element.addClass('hide-nav landing-page');
               case '/pages/lock-screen':
-                return $element.addClass('body-wide body-lock');
+                return $element.addClass('hide-nav body-wide body-lock');
               // case '/pages/blank':
               //   return $element.addClass('hide-nav');
             }

@@ -2668,3 +2668,17 @@ body {
 .hide-nav .nav-left li:nth-child(1) {
   display: none;
 }
+
+
+/* Landing Page Styling */
+
+.landing-page .header-container > .top-header .top-nav .nav-left .search-box, .header-container > .top-header .top-nav .nav-right .search-box,
+.landing-page .header-container > .top-header .top-nav .nav-right > li.btn-new-adventure,
+.landing-page .header-container > .top-header .top-nav .nav-right > li.nav-profile,
+.landing-page .header-container > .top-header .top-nav .nav-right > li.mail  {
+  display: none !important;
+}
+.landing-page .header-container > .top-header .top-nav .nav-right > li.signin,
+.landing-page .header-container > .top-header .top-nav .nav-left > li.signin {
+  display: inherit !important;
+}
