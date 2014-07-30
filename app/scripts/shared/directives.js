@@ -29,12 +29,12 @@
               case '/pages/signin':
               case '/pages/signup':
               case '/pages/forgot-password':
+              case '/pages/landing_page.html':
                 return $element.addClass('body-wide');
               case '/pages/lock-screen':
                 return $element.addClass('body-wide body-lock');
-              case '/pages/blank':
-                return $element.addClass('hide-nav');
-                console.log($element);
+              // case '/pages/blank':
+              //   return $element.addClass('hide-nav');
             }
           };
           addBg($location.path());
