@@ -1,0 +1,229 @@
+.alt-nav { display: none; }
+.nav { margin-top: 20px; white-space: nowrap; }
+.nav ul { padding: 0; list-style: none; }
+.navigation {
+  $nav-color : #FFF;
+  $nav-color-hover : #FFF;
+  $nav-padding: 0;
+
+	display: block;
+	margin: 55px 0 0 0;
+	padding: 0;
+	list-style: none;
+	white-space: nowrap;
+
+  /* Navigation functional styles  ---------------------- */
+  li { position: relative; }
+  > li { display: inline-block; }
+  ul { position: absolute; z-index: 300; top: -999em; }
+  li:hover > ul,
+  .sfHover > ul { top: auto; left: 12px; }
+  li li:hover > ul,
+  li .sfHover > ul { top: 0; left: 100%; }
+  li li li:hover > ul,
+  li li .sfHover > ul{ top: 0; left: 100%; }
+  a, #navigation a:visited { display: block; white-space: nowrap; }
+
+	&.left-nav {
+		margin-left: -12px;
+	}
+
+	&.right-nav {
+		margin-right: -12px;
+	}
+
+  a, a:visited {
+    padding: 0 $nav-padding;
+    color: $nav-color;
+		font-size: 13px;
+		text-transform: uppercase;
+    /* Global Menu Link Styles */
+  }
+
+  > li:first-child a { }
+  > li:last-child a { }
+
+  a:hover,
+  .sfHover > a,
+  .sfHover > a:visited {
+    text-decoration: none;
+    /* First Level & Global Menu Link Hover Styles */
+  }
+
+  > li > a,
+  > li > a:visited {
+		margin: 0 12px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid transparent;
+		/* First Level Menu Link Styles */
+  }
+
+	> li li {
+		border: 1px solid transparent;
+		border-bottom: none;
+	}
+
+	> li ul > li:last-child {
+		border-bottom: 1px solid transparent;
+	}
+
+	> li > a:hover,
+	> li.sfHover > a,
+	> li.sfHover >a:visited {
+		border-bottom: 1px solid #FFF;
+		/* First Level Menu Link Hover Styles */
+	}
+
+  > li ul a,
+  > li ul a:visited {
+		background: rgba(255,255,255,0.1);
+		padding: 8px 12px;
+		font-size: 11px;
+    /* All Other Menu Level Link Styles */
+  }
+
+  > li ul a:hover,
+  > li ul .sfHover > a,
+  > li ul .sfHover > a:visited {
+		background: #FFF;
+    /* All Other Level Menu Link Hover Styles */
+  }
+
+  > li > a:hover,
+  > li.sfHover > a,
+  > li.sfHover > a:active,
+  > li.current_page_item > a,
+  > li.current_page_item > a:visited,
+  > li.current-menu-item > a,
+  > li.current-menu-item > a:visited,
+  > li.current-menu-ancestor > a,
+  > li.current-menu-ancestor > a:visited,
+  > li.current-menu-parent > a,
+  > li.current-menu-parent > a:visited,
+  > li.current > a,
+  > li.current > a:visited {
+
+    color: $nav-color-hover;
+
+   /* WordPress First Level Current/Ancestor Hover Page Styles */
+  }
+
+  ul {
+		background: transparent;
+		border: 1px solid #FFF;
+		min-width: 180px;
+    /* All Lower Level Menu Container Styles */
+  }
+
+  a.sf-with-ul {
+    padding-right: $nav-padding + 5px;
+    position: relative;
+    /* Styling for navigation arrows  ---------- */
+  }
+
+
+	> li ul a,
+	> li ul a:visited {
+		color: #6c6c6c;
+		background: rgba(250,250,250,0.9);
+		padding: 8px 12px;
+		font-size: 11px;
+		/* All Other Menu Level Link Styles */
+	}
+
+	> li ul a:hover,
+	> li ul .sfHover > a,
+	> li ul .sfHover > a:visited {
+		color: #6c6c6c;
+		background: #FFF;
+		/* All Other Level Menu Link Hover Styles */
+	}
+
+	ul {
+		border: 1px solid #C2C2C2;
+	}
+
+  &.sf-arrows .sf-with-ul:after {
+		font-family: FontAwesome;
+    content: '\f107';
+    position: absolute;
+		top: 5px;
+		font-size: 12px;
+		font-weight: normal;
+		opacity: 0.8;
+    right: $nav-padding - 6px;
+    margin-top: -6px;
+  }
+
+
+  &.sf-arrows ul .sf-with-ul:after {
+		content: '\f105';
+		font-size: 13px;
+    margin-top: 1px;
+    right: 8px;
+    /* Styling for right facing arrows  ---------- */
+  }
+
+}
+
+.navigation {
+	&.right-nav {
+		text-align: right;
+	}
+
+	ul {
+		text-align: left;
+	}
+}
+
+/* Alternative Styles */
+
+.alt {
+	.navigation {
+		a, a:visited {
+			color: #6c6c6c !important;
+			border-color: #6c6c6c;
+		}
+
+		> li > a:hover,
+		> li.sfHover > a,
+		> li.sfHover >a:visited {
+			border-bottom: 1px solid #6c6c6c;
+			/* First Level Menu Link Hover Styles */
+		}
+
+		> li > a,
+		> li > a:visited {
+			border-bottom: 1px solid transparent;
+			/* First Level Menu Link Styles */
+		}
+	}
+}
+
+.fwslider, .page-template-template-homepage-1-php {
+	.navigation {
+		ul {
+			background: transparent;
+			border: 1px solid #FFF;
+			min-width: 180px;
+			/* All Lower Level Menu Container Styles */
+		}
+
+		> li ul a,
+		> li ul a:visited {
+			color: #FFF;
+			background: rgba(255,255,255,0.1);
+			padding: 8px 12px;
+			font-size: 11px;
+			/* All Other Menu Level Link Styles */
+		}
+
+		> li ul a:hover,
+		> li ul .sfHover > a,
+		> li ul .sfHover > a:visited {
+			color: #6c6c6c;
+			background: #FFF;
+			/* All Other Level Menu Link Hover Styles */
+		}
+	}
+}

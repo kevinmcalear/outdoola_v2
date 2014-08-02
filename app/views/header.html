@@ -2,7 +2,7 @@
 
     <!-- Logo -->
     <div class="logo">
-        <a href="#/">
+        <a href="#/" ng-click="reloadRoute()">
             <!-- <span class="logo-icon glyphicon glyphicon-fire"></span> -->
             <i class="wi-sunrise logo-icon"></i>
             <span>{{main.brand}}</span>
@@ -71,14 +71,14 @@
                 </div>
             </li>
             <li style="display:none;" class="signin">
-                <a href="#/pages/about">
+                <a href="#/pages/about" ng-click="reloadRoute()">
                     About
                     <!-- <i class="fa fa-lock"></i>
                     <span data-i18n="Account"></span> -->
                 </a>
             </li>
             <li style="display:none;" class="signin">
-                <a href="#/pages/contact">
+                <a href="#/pages/contact" ng-click="reloadRoute()">
                     Contact
                     <!-- <i class="fa fa-lock"></i>
                     <span data-i18n="Account"></span> -->

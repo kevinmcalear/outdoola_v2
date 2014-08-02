@@ -1,0 +1,211 @@
+/**
+ * CSSIgniter Dropckick styles
+ */
+
+.dk_theme_ci {
+  /* Container */
+  &.dk_container {
+		width: 100% !important;
+		outline: none;
+		font-family: Montserrat, sans-serif;
+		line-height: normal;
+		cursor: pointer;
+  }
+
+  a, a:visited {
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+  
+  /* Toggle */
+  .dk_toggle {
+		border: 2px solid #C2C2C2;
+		color: #A9A9A9;
+		outline: none;
+		font-size: 14px;
+		text-decoration: none;
+		padding: 12px 18px;
+		transition: 0.2s;
+		position: relative;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		width: 100% !important;
+
+    &:hover {
+      
+    }
+
+		&:after {
+			font-family: FontAwesome;
+			line-height: normal;
+			font-weight: normal;
+			font-size: 12px;
+			content: "\f078";
+			position: absolute;
+			top: 15px;
+			right: 10px;
+		}
+  }
+  
+  /* Focus State */
+  &.dk_focus, &:focus {
+    .dk_toggle {
+			border-color: #C2C2C2;
+			transition: border-color 0s linear;
+		}
+  }
+  
+  /* Open State */
+  &.dk_open {
+    .dk_toggle {
+			color: #A9A9A9;
+    }
+  }
+  
+  /* Options Menu */
+  .dk_options {
+		border: 2px solid $main-color;
+		border-top: 1px solid rgba(0,0,0,0.001);
+		z-index: 10;
+		li { border-bottom: 1px solid #C2C2C2; }
+		li:last-child { border-bottom: none; }
+    a {
+
+			background: #FFF;
+			color: #6c6c6c;
+			font-size: 12px;
+			text-transform: uppercase;
+			cursor: pointer;
+			padding: 7px 8px;
+			&:hover {
+      	background: $main-color;
+				color: #FFF !important;
+    	}
+    }
+  }
+  .dk_options_current a {
+    
+  }
+  
+  /* Inner Options */
+  .dk_options_inner {
+    list-style: none;
+		margin: 0;
+		padding: 0;
+  }
+  
+  /* Set a width property here */
+  .dk_options_inner, &.dk_touch .dk_options {}
+}
+
+.b-form {
+	.dk_theme_ci {
+		.dk_toggle {
+			border: 2px solid rgba(255,255,255,0.7);
+			color: rgba(255,255,255,0.7);
+			transition: 0.18s;
+		}
+
+		&.dk_focus, &:focus {
+			.dk_toggle {
+				border-color: #FFF;
+			}
+		}
+
+		&.dk_open {
+			.dk_toggle {
+				color: #FFF;
+				border-color: #FFF;
+			}
+		}
+
+		.dk_options {
+			border: 2px solid #C2C2C2;
+
+			li { border-bottom: 1px solid #FFF; }
+			a {
+				background: rgba(250, 250, 250, 0.90);
+				color: #6c6c6c;
+				&:hover {
+					background: #FFF;
+					color: #333 !important;
+				}
+			}
+		}
+	}
+}
+
+//***** Critical to the continued enjoyment of working dropdowns ******
+
+.dk_container {
+  display: none;
+  float: left;
+  a {
+    outline: 0;
+  }
+}
+
+.dk_toggle {
+  display: -moz-inline-stack;
+  display: inline-block;
+  *display: inline;
+  position: relative;
+  zoom: 1;
+}
+
+.dk_open {
+  position: relative;
+  .dk_options {
+    display: block;
+  }
+  .dk_label {
+    color: inherit;
+  }
+}
+
+.dk_options {
+  display: none;
+  margin-top: -1px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  a, a:link, a:visited{
+    display: block;
+  }
+}
+
+.dk_options_inner {
+  overflow: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+// Hides only dropkick <select> instances
+.dk_container select {
+  position: absolute;
+  top: -99999em;
+  visibility: hidden;
+	display: none;
+}
+
+//  nativeMobile override 
+.dk_mobile {
+  position: relative;
+  select {
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    visibility: visible;
+    opacity: 0;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+  }
+}
+
+//***** End Critical to the continued enjoyment of working dropdowns ******

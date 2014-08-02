@@ -72,6 +72,9 @@
       return $scope.$on('taskRemaining:changed', function(event, count) {
         return $scope.taskRemainingCount = count;
       });
+      $scope.reloadRoute = function() {
+       $route.reload();
+      }
     }
   ]).controller('DashboardCtrl', ['$scope', function($scope) {}]);
 
