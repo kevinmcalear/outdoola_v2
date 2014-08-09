@@ -2092,7 +2092,8 @@
   color: #A9A9A9;
 }
 .front-page .dk_theme_ci .dk_options {
-  border: 2px solid #1289d5;
+  border: 2px solid #1289d5 !important;
+  background: #1289d5 !important;
   border-top: 1px solid rgba(0, 0, 0, 0.001);
   z-index: 10;
 }
@@ -2111,7 +2112,8 @@
   padding: 7px 8px;
 }
 .front-page .dk_theme_ci .dk_options a:hover {
-  background: #1289d5;
+  background: #1289d5 !important;
+  border-color: #1289d5 !important;
   color: #FFF !important;
 }
 .front-page .dk_theme_ci .dk_options_inner {
