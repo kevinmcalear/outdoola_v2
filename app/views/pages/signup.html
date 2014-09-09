@@ -1,4 +1,4 @@
-<div class="page-signup">
+<!-- <div class="page-signup">
 
     <div class="signin-header">
         <section class="logo text-center">
@@ -45,7 +45,7 @@
                             <div class="divider"></div>
                             <a href="#/" class="btn btn-primary btn-block btn-lg btn-round">Sign up</a>
                         </div>
- 
+
                     </form>
                 </section>
 
@@ -56,4 +56,35 @@
             </div>
         </div>
     </div>
+</div>
+ -->
+<div class="container" ng-controller="LoginCtrl">
+    <p id="error"></p>
+    <div id="login" class="view active">
+        <ul>
+            <li>
+                <input id="txtEmail" class="input-box" type="text" placeholder="Email" />
+            </li>
+            <li>
+                <input id="txtPass" class="input-box" type="password" placeholder="Password" />
+            </li>
+            <li>
+                <label for="chkRegister">
+                    <input id="chkRegister" type="checkbox" value="Register" checked /> Register
+                </label>
+            </li>
+            <li>
+                <button id="btAction" class="btn">Register</button>
+            </li>
+        </ul>
+    </div>
+
+    <div id="userInfo" class="view">
+        <h4>Users</h4>
+        <button id="btLogout" class="btn">Logout</button>
+        <ul id="userList">
+
+        </ul>
+    </div>
+
 </div>

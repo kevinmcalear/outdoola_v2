@@ -32,7 +32,8 @@
     "flot": "~0.8.3",
     "flot.tooltip": "~0.7.0",
     "firebase": "~1.0.19",
-    "angularfire": "~0.8.0"
+    "angularfire": "~0.8.0",
+    "firebase-simple-login": "~1.6.3"
   },
   "devDependencies": {
     "holderjs": "~2.3.1",

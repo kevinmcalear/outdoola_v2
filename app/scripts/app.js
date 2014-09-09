@@ -59,8 +59,8 @@
         'pages/invoice',
         'pages/lock-screen',
         'pages/profile',
-        'pages/signin',
-        'pages/signup',
+        // 'pages/signin',
+        // 'pages/signup',
         'mail/compose',
         'mail/inbox',
         'mail/single',
@@ -88,6 +88,12 @@
         // templateUrl: 'views/pages/landing-page.html'
         redirectTo: 'pages/landing-page'
         // redirectTo: '/pages/blank'
+      }).when('/login', {
+        templateUrl: '/views/pages/signin.html',
+        controller: 'LoginCtrl'
+      }).when('/signup', {
+        templateUrl: '/views/pages/signup.html',
+        controller: 'LoginCtrl'
       }).when('/404', {
         templateUrl: 'views/pages/404.html'
       }).otherwise({
